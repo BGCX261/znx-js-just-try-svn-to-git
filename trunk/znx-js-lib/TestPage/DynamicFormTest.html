@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--当前日期：2012-6-12-->
+<!--编码：UTF-8-->
+<!--创建人:znx-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JsLib测试页</title>
+<link rel="stylesheet" type="text/css"
+	href="../extbase/resources/css/ext-all.css" />
+<script type="text/javascript" src="../extbase/ext-all.js"></script>
+<script type="text/javascript" src="../myextjs/DynamicForm.js"></script>
+<script type="text/javascript" src="../myextjs/FormFactoryWithColumn.js"></script>
+<script type="text/javascript" src="../testjs/data/DynamicFormData.js"></script>
+<script type="text/javascript" src="../testjs/data/example-data.js"></script>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<div id="DynamicFormGormWrap"></div>
+</body>
+<script type="text/javascript">
+	
+
+	/************************生成两列 **************************/
+	//var dynamicInstance = new FormFactory();
+	//dynamicInstance.buildForm(dynamicData,"",2,120);
+	
+	
+	/************************重置宽度后生成n列  **************************/
+	var dynamicInstance = new FormFactory();
+	dynamicInstance.dynamicForm.formConfig.width =1000;
+	//标签对齐
+	var formPanel = dynamicInstance.buildForm(dynamicData,"",3,120);
+	
+	
+	/***********************测试生成静态下拉框 ***************************/
+	//var dynamicInstance = new FormFactory();
+	//var formPanel = dynamicInstance.buildForm(dynamicData,"",2,120);
+	//var combo = dynamicInstance.dynamicForm.createComboBox("combo","下拉框 ","text","value",[{value:0,text:"a0"},{value:1,text:"a1"}],["value","text"])
+	//var combo = dynamicInstance.dynamicForm.createComboBoxWithStore("combo","下拉框 ","name","data1",window.store1)
+	//formPanel.add(combo);
+	
+	
+	/***********************测试正则表达式  ***************************/
+	//var dynamicInstance = new DynamicForm();
+	//var formPanel = dynamicInstance.createFormPanel();
+	
+	//var regexConfig=dynamicInstance.createRegexText(/^[1-9]\d{4,12}$/,"输入数字","default",/[\d\-]/);
+	//var text  = dynamicInstance.createTextField("name", "fieldLabel",{},regexConfig);
+	//formPanel.add(text);
+	
+	
+	/***********************测试Raido和checkbox  ***************************/
+	//var dynamicInstance = new DynamicForm();
+	//var formPanel = dynamicInstance.createFormPanel();
+	
+	//var r1=dynamicInstance.createRadio("n1","r1",1,"r1");
+	//var r2=dynamicInstance.createRadio("n1","r2",2,"r2");
+	//var fieldContainer = dynamicInstance.createFieldContainer("多选框",[r1,r2],"hbox");
+	
+	//var r1=dynamicInstance.createCheckbox("n1","r1",1,"r1");
+	//var r2=dynamicInstance.createCheckbox("n1","r2",2,"r2");
+	//var fieldContainer = dynamicInstance.createFieldContainer("多选框",[r1,r2],"hbox",{labelWidth:60});
+	//formPanel.add(fieldContainer);
+	
+
+</script>
+</html>

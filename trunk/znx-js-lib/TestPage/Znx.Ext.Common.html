@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--当前日期：2012-6-14-->
+<!--编码：UTF-8-->
+<!--创建人:znx-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JsLib测试页</title>
+    <link rel="stylesheet" type="text/css" href="../extbase/resources/css/ext-all.css" />
+    <script type="text/javascript" src="../extbase/ext-all.js"></script>	
+    <script type="text/javascript" src="../testjs/data/example-data.js"></script>
+    <script type="text/javascript" src="../myextjs/DynamicForm.js"></script>
+    <script type="text/javascript" src="../myextjs/DynamicFormUx.js"></script>
+     <script type="text/javascript" src="../myextjs/Znx.Ext.Common.js"></script>
+	<script type="text/javascript" src="../myextjs/FormFactoryWithColumn.js"></script>
+    <script type="text/javascript" >
+    
+    </script>
+</head>
+<body>
+   <div id="DynamicFormGormWrap"></div>
+</body>
+  	 <script type="text/javascript" >
+ 	var dynamicInstance = new DynamicForm();
+ 	var store = dynamicInstance.createSimpleStore("abc",[{value:0,text:"a0"},{value:1,text:"a1"}],["value","text"]);
+ 	var formPanel = dynamicInstance.createGridPanel([{header:"wege",dataIndex:"name"}],store,true,"SingleSelect",{renderTo:"DynamicFormGormWrap"});
+ 	//var combo = dynamicInstance.createComboBoxWithStore("combo","下拉框 ","name","data1",window.store1) 	
+ 	//formPanel.add(combo);
+ 	//formPanel.setLoading(true);
+  	Znx.Ext.Common.setMask(formPanel,store);
+  	
+    </script>
+    
+</html>
